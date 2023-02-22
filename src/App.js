@@ -1,13 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import { FormattedMessage } from 'react-intl';
+import SwitchLanguageButton from './components/language/SwitchLanguageButton';
+import ThemeSwitcher from './components/theme/ThemeSwitcher';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <FormattedMessage id="paragraph" />
         </p>
         <a
           className="App-link"
@@ -15,8 +16,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <FormattedMessage id="link" />
         </a>
+
+        <SwitchLanguageButton />
+        <ThemeSwitcher />
       </header>
     </div>
   );
